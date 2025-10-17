@@ -6,6 +6,15 @@
   display: flex;
   border-bottom: 2px solid #e0e5eb;
   margin-bottom: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.hostel-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .hostel-tab {
@@ -19,6 +28,8 @@
   font-weight: 600;
   border-bottom: 3px solid transparent;
   transition: all 0.16s;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .hostel-tab.active {
@@ -81,8 +92,8 @@
 @media (max-width: 900px) {
   .hostel-tab {
     font-size: 0.97rem;
-    padding: 11px 13px 8px 4px;
-    margin-right: 6px;
+    padding: 11px 20px 8px 6px;
+    margin-right: 10px;
   }
   .hostel-box h3 {
     font-size: 1.08rem;
@@ -91,9 +102,10 @@
 }
 
 @media (max-width: 700px) {
-  .hostel-tabs {
-    flex-wrap: wrap;
-    font-size: 0.92rem;
+  .hostel-tab {
+    font-size: 0.95rem;
+    padding: 11px 20px 10px 6px;
+    margin-right: 8px;
   }
   .hostel-box {
     padding: 10px;
