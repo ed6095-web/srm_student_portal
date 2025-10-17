@@ -57,8 +57,8 @@ function Sidebar({ onLinkClick }) {
       <div className="sidebar-footer">
         <div className="footer-strip">
           <div>
-            <strong>RA2411026011354</strong><br />
-            EASHAN DARSH
+            <strong>RA2411026011355</strong><br />
+            DEBARPAN CHAUDHURI
           </div>
           <div style={{ fontSize: "0.97em", marginTop: "7px", opacity: 0.85 }}>
             Fri 17-Oct-2025 23:46:00
@@ -70,3 +70,4 @@ function Sidebar({ onLinkClick }) {
 }
 
 export default Sidebar;
+
