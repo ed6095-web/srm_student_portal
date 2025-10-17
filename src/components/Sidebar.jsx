@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaTachometerAlt, FaMoneyCheck, FaUser, FaMedal, FaBookOpen, FaCheckCircle, FaRedo, FaCalendarAlt, FaFileAlt, FaHotel, FaTruckMoving, FaRupeeSign, FaClipboardList, FaIdCard, FaTicketAlt } from "react-icons/fa";
 
@@ -24,6 +24,31 @@ const menuItems = [
 ];
 
 function Sidebar({ onLinkClick }) {
+  const [currentDateTime, setCurrentDateTime] = useState("");
+
+  useEffect(() => {
+    const updateDateTime = () => {
+      const now = new Date();
+      const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      
+      const dayName = days[now.getDay()];
+      const day = String(now.getDate()).padStart(2, '0');
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+
+      setCurrentDateTime(`${dayName} ${day}-${month}-${year} ${hours}:${minutes}:${seconds}`);
+    };
+
+    updateDateTime(); // Initial call
+    const interval = setInterval(updateDateTime, 1000); // Update every second
+
+    return () => clearInterval(interval); // Cleanup
+  }, []);
+
   return (
     <aside className="sidebar">
       <nav>
@@ -61,7 +86,7 @@ function Sidebar({ onLinkClick }) {
             DEBARPAN CHAUDHURI
           </div>
           <div style={{ fontSize: "0.97em", marginTop: "7px", opacity: 0.85 }}>
-            Fri 17-Oct-2025 23:46:00
+            {currentDateTime}
           </div>
         </div>
       </div>
@@ -70,4 +95,3 @@ function Sidebar({ onLinkClick }) {
 }
 
 export default Sidebar;
-
