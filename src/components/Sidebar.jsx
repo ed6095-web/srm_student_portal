@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaTachometerAlt, FaMoneyCheck, FaUser, FaMedal, FaBookOpen, FaCheckCircle, FaRedo, FaCalendarAlt, FaFileAlt, FaHotel, FaTruckMoving, FaRupeeSign, FaClipboardList, FaIdCard, FaTicketAlt } from "react-icons/fa";
 
 const menuItems = [
@@ -23,9 +23,7 @@ const menuItems = [
   { label: "Exam HallTicket", icon: <FaTicketAlt /> }
 ];
 
-function Sidebar() {
-  const location = useLocation();
-
+function Sidebar({ onLinkClick }) {
   return (
     <aside className="sidebar">
       <nav>
@@ -39,6 +37,7 @@ function Sidebar() {
                     "sidebar-link" + (isActive ? " active" : "")
                   }
                   end={item.route === "/"}
+                  onClick={onLinkClick}
                 >
                   <span className="sidebar-icon">{item.icon}</span>
                   {item.label}
@@ -58,11 +57,11 @@ function Sidebar() {
       <div className="sidebar-footer">
         <div className="footer-strip">
           <div>
-            <strong>RA2411026011355</strong><br />
-            DEBARPAN CHAUDHURI
+            <strong>RA2411026011354</strong><br />
+            EASHAN DARSH
           </div>
           <div style={{ fontSize: "0.97em", marginTop: "7px", opacity: 0.85 }}>
-            Fri 17-Oct-2025 19:28:11
+            Fri 17-Oct-2025 23:46:00
           </div>
         </div>
       </div>
