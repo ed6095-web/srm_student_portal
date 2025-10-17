@@ -89,17 +89,17 @@
   background: #fff;
   border: 1px solid #d6dde5;
   cursor: pointer;
-  padding: 8px 20px;
+  padding: 6px 14px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   transition: background 0.2s;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #4a5568;
   font-weight: 500;
-  min-width: 80px;
+  min-width: 70px;
 }
 
 .logout-btn:hover {
@@ -107,7 +107,7 @@
 }
 
 .logout-icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #4a5568;
 }
 
@@ -143,11 +143,12 @@
     font-size: 0.9rem;
   }
   .logout-btn {
-    padding: 6px 12px;
-    font-size: 0.88rem;
-    min-width: 65px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    min-width: 60px;
+    gap: 2px;
   }
   .logout-icon {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
