@@ -1,0 +1,98 @@
+/* Student Profile Box */
+.profile-box {
+  background: #fff;
+  border: 1px solid #d6dde5;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.profile-header {
+  background: #4a90e2;
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 1.08rem;
+  font-weight: 600;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-table tbody tr {
+  border-bottom: 1px solid #e8ecf1;
+}
+
+.profile-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.profile-table td {
+  padding: 12px 18px;
+  font-size: 0.97rem;
+  color: #3d4852;
+  vertical-align: top;
+}
+
+.profile-table td:first-child {
+  font-weight: 500;
+  color: #5a6c7d;
+  width: 32%;
+}
+
+.profile-highlight {
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+}
+
+.profile-email {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* Status/Photo Box */
+.status-box {
+  background: #fff;
+  border: 1px solid #d6dde5;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.photo-holder {
+  margin-bottom: 18px;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #4a90e2;
+  object-fit: cover;
+  display: block;
+}
+
+
+.status-text {
+  font-size: 1rem;
+  color: #3d4852;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.active-green {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.reload-icon {
+  margin-top: 8px;
+  cursor: pointer;
+}

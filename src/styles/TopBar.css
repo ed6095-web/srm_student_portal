@@ -1,0 +1,119 @@
+.topbar {
+  background: #fff;
+  border-bottom: 2px solid #d6dde5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  height: 76px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.hamburger-menu span {
+  width: 24px;
+  height: 3px;
+  background: #4a5568;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.hamburger-menu:hover span {
+  background: #2563eb;
+}
+
+.topbar-logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.topbar-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.topbar-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin-top: 2px;
+  letter-spacing: 0.1px;
+}
+
+.topbar-center h1 {
+  font-size: 1.15rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  background: #fff;
+  border: 1px solid #d6dde5;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.logout-btn {
+  background: #fff;
+  border: 1px solid #d6dde5;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s;
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.logout-btn:hover {
+  background: #f1f5f9;
+}
+
+.logout-icon {
+  font-size: 1.5rem;
+  color: #4a5568;
+}
+

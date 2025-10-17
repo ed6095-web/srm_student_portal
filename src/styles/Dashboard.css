@@ -1,0 +1,25 @@
+.dashboard-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.profile-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-right {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+/* Responsive for tablets/mobile */
+@media (max-width: 1000px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .profile-right {
+    width: 100%;
+  }
+}
