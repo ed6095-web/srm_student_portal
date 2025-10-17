@@ -59,6 +59,15 @@
   color: #1e3a5f;
   margin-top: 2px;
   letter-spacing: 0.1px;
+  white-space: nowrap;
+}
+
+.topbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  overflow: hidden;
 }
 
 .topbar-center h1 {
@@ -67,28 +76,13 @@
   font-weight: 600;
   margin: 0;
   letter-spacing: 0.2px;
+  text-align: center;
 }
 
 .topbar-right {
   display: flex;
   align-items: center;
   margin-right: 10px;
-}
-
-.logout-btn {
-  background: #fff;
-  border: 1px solid #d6dde5;
-  cursor: pointer;
-  padding: 8px 14px;
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  transition: background 0.2s;
-  font-size: 0.95rem;
-  color: #4a5568;
-  font-weight: 500;
 }
 
 .logout-btn {
@@ -117,3 +111,43 @@
   color: #4a5568;
 }
 
+/* Responsive - Hide center text on mobile */
+@media (max-width: 900px) {
+  .topbar {
+    padding: 6px 10px;
+    height: 65px;
+  }
+  .topbar-center {
+    display: none;
+  }
+  .topbar-logo {
+    height: 38px;
+  }
+  .topbar-title {
+    font-size: 0.95rem;
+  }
+  .topbar-left {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 6px 8px;
+    height: 60px;
+  }
+  .topbar-logo {
+    height: 35px;
+  }
+  .topbar-title {
+    font-size: 0.9rem;
+  }
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 0.88rem;
+    min-width: 65px;
+  }
+  .logout-icon {
+    font-size: 1.3rem;
+  }
+}
